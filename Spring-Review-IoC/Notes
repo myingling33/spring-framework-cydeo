@@ -8,3 +8,20 @@ TASK 1:
     5 - Create one method for each class:
         - createAccount() -> print something (void).
     6 - Get beans using Spring Core @Bean annotation.
+    -------------
+    7 - We need two String objects:
+        "Welcome to CydeoApp"
+        "Spring Core Practice"
+    8 - Print those two objects in the same project (with new config file).
+
+TASK 2:
+    1 - Create new package under java: stereotype_annotations.
+    2 - Create Model and Config Package.
+    3 - Under the Model package:
+        - DataStructure
+        - DevOps
+        - Microservice
+    4 - Create method for each of them which is getTotalHours() and print some
+        hour. Ex:  "Total hours: " + 20;
+    5 - We only need object from DataStructure and Microservices.
+    6 - Use Stereotype Annotation way to solve it.
