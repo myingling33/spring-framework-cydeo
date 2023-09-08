@@ -13,14 +13,15 @@ public class CydeoApp {
         comment.setAuthor("Johnson");
         comment.setText("Spring Framework");
 
+        // Create the container, go to the Config class and scan all of the beans.
         ApplicationContext context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
-        CommentService cs1 = context.getBean(CommentService.class);
-        CommentService cs2 = context.getBean(CommentService.class);
-
-        System.out.println(cs1);
-        System.out.println(cs2);
-
-        System.out.println(cs1 == cs2);
+//        CommentService cs1 = context.getBean(CommentService.class);
+//        CommentService cs2 = context.getBean(CommentService.class);
+//
+//        System.out.println(cs1);
+//        System.out.println(cs2);
+//
+//        System.out.println(cs1 == cs2);
     }
 }
