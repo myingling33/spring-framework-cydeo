@@ -1,0 +1,10 @@
+TASK 1:
+    1 - Create new module Spring-Review-IoC.
+    2 - Add Spring Core dependency.
+    3 - Create one package named bean-practice.
+    4 - Create 2 classes:
+        - FullTimeEmployee
+        - PartTimeEmployee
+    5 - Create one method for each class:
+        - createAccount() -> print something (void).
+    6 - Get beans using Spring Core @Bean annotation.

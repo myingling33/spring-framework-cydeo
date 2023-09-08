@@ -1,0 +1,5 @@
+If there's a "has-a" relationship between the classes, we want Spring to manage
+those classes.
+
+If the class itself doesn't have any relationships and we're not using that
+class in another class as an input, then we won't label that class.
