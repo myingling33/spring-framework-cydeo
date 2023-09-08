@@ -25,3 +25,9 @@ TASK 2:
         hour. Ex:  "Total hours: " + 20;
     5 - We only need object from DataStructure and Microservices.
     6 - Use Stereotype Annotation way to solve it.
+
+TASK 3:
+    7 - Create ExtraHours class inside the model package.
+    8 - Create a method getHours() that returns 10;
+    9 - Use this method inside the DataStructure class to increase the total hours.
+    10 - Try to use lombok annotations for creating constructor.
