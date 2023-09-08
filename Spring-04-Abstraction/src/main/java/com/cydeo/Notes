@@ -1,0 +1,4 @@
+If one interface has more than one implementation, how will Spring inject the bean?
+Need to tell Spring which one to inject -> 2 approaches:
+1. @Primary
+2. @Qualifier
