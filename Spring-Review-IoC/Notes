@@ -31,3 +31,25 @@ TASK 3:
     8 - Create a method getHours() that returns 10;
     9 - Use this method inside the DataStructure class to increase the total hours.
     10 - Try to use lombok annotations for creating constructor.
+
+TASK 4:
+    1 - Create new module: spring-review-project.
+    2 - Create config, repository, model, service packages.
+    3 - Create Employee class with:
+        - name
+        - department
+        - hourlyRate fields
+    4 - Create EmployeeRepository interface.
+        - One abstract method -> int getHourlyRate().
+    5- Create impl class DBEmployeeRepository (we will assume we're getting info from db).
+        - Override the method.
+        - Create one employee inside.
+        - Return emp1.getHourlyRate().
+    6 - Create HoursRepository interface.
+        - int getHours() abstract method.
+    7 - Create RegularHours class override method and return 40.
+    8 - Create Salary Service.
+        - Create calculateRegularSalary() method and print salary (hourlyRate * RegularHours)
+          (no static values).
+    9 - Create OvertimeHours class, implement hours interface and override method and return 15.
+    10 - Handle the error when you call calculateRegularSalary method.
