@@ -26,6 +26,67 @@ CydeoApplicationTests.java: simple test class that ensures that the
 Spring application context loads successfully. You will add more
 tests to the mix as you develop the application.
 
+Build Specification:
+<parent>:
+    This specifies that your project has spring-boot-starter-parent
+    as its parent POM. This parent POM provides dependency management for
+    several libraries commonly used in Spring projects. For those libraries
+    covered by the parent POM, you won't have to specify a version because it's
+    inherited from the parent.
+
+All dependencies have the word starter in their artifact ID.
+
+Your build file will be significantly smaller and easier to manage because
+you won't need to declare a dependency on every library you might need.
+
+You are able to think of your dependencies in terms of what capabilities they
+provide, rather than their library name (e.g., web starter dependency).
+
+You are free from the burden of worrying about library versions. You only need
+to worry about which version of Spring Boot you are using.
+
+Spring Boot plugin:
+- It provides a Maven goal that enables you to run the application using Maven.
+- It ensures that all dependency libraries are included within the executable
+  JAR file.
+-------
+BootStrapping the application:
+
+Because you will be running the application from an executable JAR, it is
+important to have a main class that will be executed when that JAR file is run.
+
+@SpringBootApplication: a composite annotation that combines the following
+annotations:
+    - @SpringBootConfiguration: designates this class as a configuration class.
+      You can add Java based Spring framework configuration to this class if you
+      need to. This annotation is a specialized form of the @Configuration
+      annotation.
+    - @EnableAutoConfiguration: enables Spring Boot automatic configuration. It
+      tells Spring Boot to automatically configure any components that it thinks
+      you will need.
+    - @ComponentScan: enables component scanning. This lets you declare other
+      classes with annotation like @Component to have Spring automatically
+      discover and register them as components in the Spring application context.
+
+main() method: calls a static run method on SpringApplication class, which
+performs the actual bootstrapping of the application, creating the Spring
+application context. The 2 parameters passed to run() method are a configuration
+class and the command line arguments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
