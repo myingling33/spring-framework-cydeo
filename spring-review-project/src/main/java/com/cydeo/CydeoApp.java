@@ -1,6 +1,7 @@
 package com.cydeo;
 
 import com.cydeo.config.EmployeeConfig;
+import com.cydeo.service.OvertimeSalaryService;
 import com.cydeo.service.SalaryService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -13,5 +14,8 @@ public class CydeoApp {
 
         SalaryService salaryService = container.getBean(SalaryService.class);
         salaryService.calculateRegularSalary();
+
+        OvertimeSalaryService overtimeSalaryService = container.getBean(OvertimeSalaryService.class);
+        overtimeSalaryService.calculateOvertimeSalary();
     }
 }
