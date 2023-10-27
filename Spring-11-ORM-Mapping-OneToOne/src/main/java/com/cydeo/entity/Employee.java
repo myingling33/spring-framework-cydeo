@@ -23,7 +23,7 @@ public class Employee extends BaseEntity {
     private Gender gender;
 
     @OneToOne
-    @JoinColumn
+    @JoinColumn(name = "department_id")
     private Department department;
 
     public Employee(String firstName, String lastName, String email, LocalDate hireDate, int salary, Gender gender) {
