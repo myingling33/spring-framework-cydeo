@@ -13,7 +13,7 @@ public class Department extends BaseEntity {
     private String department;
     private String division;
 
-    @OneToOne(mappedBy = "department")
+    @OneToOne(mappedBy = "department") // keeps from creating a second foreign key
     private Employee employee;
 
     public Department(String department, String division) {

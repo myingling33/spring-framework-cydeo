@@ -22,8 +22,10 @@ public class Employee extends BaseEntity {
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    @OneToOne
-    @JoinColumn(name = "department_id")
+    @OneToOne(cascade = CascadeType.ALL)
+//    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+
+    @JoinColumn(name = "department_id") // foreign key
     private Department department;
 
     public Employee(String firstName, String lastName, String email, LocalDate hireDate, int salary, Gender gender) {
