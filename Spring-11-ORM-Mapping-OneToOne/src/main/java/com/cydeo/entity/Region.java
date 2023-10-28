@@ -16,6 +16,7 @@ public class Region extends BaseEntity {
     private String region;
     private String country;
 
+    // Bi-directional
     @OneToOne(mappedBy = "region")
     private Employee employee;
 
