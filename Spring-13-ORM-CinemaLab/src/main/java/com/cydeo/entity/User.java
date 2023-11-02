@@ -15,6 +15,6 @@ public class User extends BaseEntity {
     private String username;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "account_details_id")
-    private Account account;
+    @JoinColumn(name = "account_details_id") // change foreign key name
+    private Account account;   // account_id
 }
