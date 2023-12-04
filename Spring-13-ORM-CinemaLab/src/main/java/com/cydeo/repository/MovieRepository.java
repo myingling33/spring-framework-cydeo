@@ -44,4 +44,18 @@ public interface MovieRepository extends JpaRepository<Movie,Long> {
     // ----------------------- Native QUERIES ------------------ //
 
     // That returns a movie by name.
+    @Query(value = "SELECT * FROM movie WHERE name = ?1", nativeQuery = true)
+    Optional<Movie> retrieveByName(String name);
+
+    // That returns the list of movies in a specific range of prices.
+    @Query(value = "SELECT * FROM movie WHERE price BETWEEN ?1 AND ?2", nativeQuery = true)
+    List<Movie> retrieveByPriceRange(BigDecimal price1, BigDecimal price2);
+
+    // Return all movies where duration exists in the range of duration.
+    @Query(value = "SELECT * FROM movie WHERE duration IN ?1", nativeQuery = true)
+    List<Movie> retrieveByDurationInRange(List<Integer> durations);
+
+    // List the top 5 most expensive movies.
+    @Query(value = "SELECT * FROM movie ORDER BY price DESC LIMIT 5", nativeQuery = true)
+    List<Movie> top5ExpensiveMovies();
 }
