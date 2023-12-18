@@ -7,6 +7,13 @@
     <groupId>org.example</groupId>
     <artifactId>Spring-00-Coupling</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>6.0.11</version>
+        </dependency>
+    </dependencies>
 
 
 </project>
