@@ -1,16 +1,26 @@
 package com.cydeo.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Entity
+@Data
+@NoArgsConstructor
+@Table(name = "user_account")
+@JsonIgnoreProperties(value = "{hibernateLazyInitializer}", ignoreUnknown = true)
 public class User extends BaseEntity {
 
     // @JsonIgnore
     private String email;
 
+    // only access the setters, not the getters. In other words,
+    // don't show me the password with a GET request.
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
     private String username;
