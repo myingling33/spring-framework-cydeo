@@ -1,9 +1,13 @@
 package com.cydeo.repository;
 
+import com.cydeo.entity.Account;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 public interface AccountRepository {
+    List<Account> findAll();
 
 //    // ------------------- DERIVED QUERIES ------------------- //
 //
