@@ -1,5 +1,6 @@
 package com.cydeo.dto;
 
+import com.cydeo.enums.AddressType;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
